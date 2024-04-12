@@ -1,0 +1,31 @@
+// import archives
+@use 'mixins'; @use '_variaveis'; @use '_header'; @use '_hero'; @use '_about'; @use '_new-season'; @use '_watch'; @use '_cast'; @use '_faq'; @use '_footer';
+
+// display styles
+* {  //reset geral           
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: variaveis.$backgroundColorPrimary;
+    &__container {
+        width: 1280px;
+        margin: o auto;
+    }
+
+    section { //define animação para a troca de seções
+        transition: all 0.5s ease-in-out;
+    }
+
+    .titles { //estilo dos títulos
+        width: max-content;
+        display: flex;
+        align-items: baseline;
+    }
+}
+
+// common styles classes
+.colored {
+    color: variaveis.$textColorSecundary
+}

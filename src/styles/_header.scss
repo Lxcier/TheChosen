@@ -1,0 +1,97 @@
+.header{
+    // texto / cor 
+    background-color: variaveis.$backgroundColorPrimary;
+    font-weight: 500;
+    //posicionamento
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    //largura / altura
+    width: 100%;
+    height: 86px;
+    line-height: 22px;
+    // box model 
+    box-shadow: 8px 13px 12px 3px rgb(0 0 0 / 35%);
+
+    //estilo interno
+    &__content {
+        // flex model / alinhamento
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // largura / altura 
+        max-width: 1280px;
+        width: 100%;
+        height: 100%;
+        // margens
+        margin: 0 auto;
+
+        // estilo do menu de navegação 
+        &__nav {
+            &__navbar {
+                &__list {
+                    // flex model / alinhamento
+                    display: flex;
+                    align-items: center;
+                    //lista
+                    list-style: none;
+
+                    //estilo dos itens
+                    &__item {
+                        // texto 
+                        text-decoration: none;
+
+                        // seletor de item 
+                        &:nth-child(1) {
+                            // cor de fundo
+                            background-color: variaveis.$textColorSecundary;
+                            // espaçamento interno
+                            padding: 8px;
+                            // estilo do hover 
+                            &:hover {
+                                // cores do fundo e texto
+                                background-color: variaveis.$textColorPrimary;
+                                color: variaveis.$textColorSecundary;
+                            }
+                        }
+                        &:nth-child(1), &:nth-child(2) {
+                            // margens 
+                            margin-right: 40px;
+                        }
+                        &:nth-child(3) {
+                            //animações 
+                            transition: .2s linear;
+                            &:hover {
+                                transform: scale(1.05);
+                            }
+                        }
+                        &:nth-child(4), &:nth-child(5) {
+                            // margens 
+                            margin-left: 40px;
+                        }
+
+                        &__link, &__link-button {
+                            // texto 
+                            font-size: 16px;
+                            color: variaveis.$textColorPrimary;
+                            text-decoration: none;
+                            // animação
+                            transition: ease .2s;
+                            &:hover {
+                                color: variaveis.$textColorSecundary;
+                            }
+                            // estilo ativo 
+                            &--is-active {
+                                color: variaveis.$textColorSecundary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//import
+@use '_variaveis'; 
+
