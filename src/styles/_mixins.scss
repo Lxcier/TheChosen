@@ -5,6 +5,7 @@
     font-size: $fontSize;
     line-height: $fontSize + 10px;
     color: variaveis.$textColorPrimary;
+    font-family: "Montserrat", sans-serif;
 }
 
 @mixin title ($fontSize: 40px) {

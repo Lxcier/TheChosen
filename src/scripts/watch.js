@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', function () {
             const tab = document.querySelector(`[data-tab-id=${abaAlvo}]`);
 
             hideAllTabs();
-            tab.classList.add('watch__list--is-active');
+            tab.classList.add('watch__content__list--is-active');
             tab.classList.add('.animated-element')
             removeActiveButton();
-            event.target.classList.add('watch__tabs__button--is-active');
+            event.target.classList.add('watch__content__tabs__button--is-active');
         });
     });
 
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const buttons = document.querySelectorAll('[data-tab-button]');
 
         buttons.forEach(button => {
-            button.classList.remove('watch__tabs__button--is-active');
+            button.classList.remove('watch__content__tabs__button--is-active');
         });
     }
 
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const tabsContainer = document.querySelectorAll('[data-tab-id]');
 
         tabsContainer.forEach(tab => {
-            tab.classList.remove('watch__list--is-active');
+            tab.classList.remove('watch__content__list--is-active');
             tab.classList.remove('.animated-element')
         });
     }

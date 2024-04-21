@@ -2,8 +2,7 @@
 
 .footer {
     width: 1280px;
-    margin-top: 65px;
-    margin-bottom: 65px;
+    margin: 65px auto;
 
     @media (max-width: 1024px) {
         width: 100%;
