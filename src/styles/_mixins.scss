@@ -1,3 +1,6 @@
+@use '_variaveis';
+
+// Textos mixins 
 @mixin text($fontSize: 16px) {
     font-size: $fontSize;
     line-height: $fontSize + 10px;
@@ -21,46 +24,73 @@
         @include text(15px)
     }
 }
-
 .text {
     @include text;
 
     @media (max-width: 768px) {
         @include text(14px)
     }
-
 }
-
 .text--small {
     @include text (12px);
 
     @media (max-width: 768px) {
         @include text(11px)
     }
+    @media (max-width: 425px) {
+        @include text(14px);
+    }
+    
 }
-
 .title--big {
     @include title (44px);
+    text-transform: uppercase;
 
     @media (max-width: 768px) {
         @include title(26px)
     }
 }
-
 .title {
     @include title;
+    text-transform: uppercase;
 
     @media (max-width: 768px) {
         @include title(24px)
     }
+    @media (max-width: 425px) {
+        @include title(20px);
+    }
 }
-
 .title--small {
-    @include title (28px);
-
+    @include title (24px);
+    color: variaveis.$textColorPrimary;
+    text-transform: uppercase;
     @media (max-width: 768px) {
-        @include title(22px)
+        @include title(22px);
+        color: variaveis.$textColorPrimary;
+    }
+    @media (max-width: 425px){
+        @include title(16px);
+        color: variaveis.$textColorPrimary;
     }
 }
 
-@use '_variaveis';
+// Flex box mixins 
+@mixin d-flex {
+    display: flex;
+    align-items: center;
+}
+@mixin d-flex--center {
+    @include d-flex();
+    justify-content: center
+}
+
+@mixin d-flex-column {
+    @include d-flex();
+    flex-direction: column;
+}
+
+@mixin d-flex-column--center {
+    @include d-flex--center();
+    flex-direction: column;
+}

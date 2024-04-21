@@ -1,0 +1,18 @@
+{
+  "name": "project-thechosen",
+  "version": "0.0.1",
+  "description": "Site sobre a série The Chosen",
+  "main": "gulpfile.js",
+  "scripts": {
+    "dev": "gulp watch",
+    "build": "gulp"
+  },
+  "author": "Lucas Lucier",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.75.0"
+  }
+}

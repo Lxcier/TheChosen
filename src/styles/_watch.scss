@@ -1,0 +1,161 @@
+@use '_variaveis';
+
+// mixins
+@mixin d-flex {
+    display: flex;
+    align-items: center;
+}
+@mixin d-flex--center {
+    @include d-flex();
+    justify-content: center
+}
+@mixin d-flex-column {
+    @include d-flex();
+    flex-direction: column;
+}
+@mixin d-flex-column--center {
+    @include d-flex--center();
+    flex-direction: column;
+}
+
+.watch {
+    // flexbox 
+    @include d-flex-column();
+    // margins 
+    margin: 0 auto;
+    // largura
+    width: 1280px;
+    @media (max-width: 1024px) {
+        width: 100%;
+    }
+    &__content {
+        padding-top: 98px;
+        @media (max-width: 768px){
+            padding: 0;
+        }
+        @media (max-width: 425px){
+            padding: 0;
+        }
+        &__titles {
+            @include d-flex--center();
+            margin-bottom: 16px;
+            h2 {
+                padding-right: 8px;
+                border-right: 1px solid #FFF;   
+            }
+            h3 {
+                padding-left: 8px;
+            }
+        }
+        &__tabs {
+            // flexbox
+            @include d-flex--center();
+            
+            @media (max-width: 425px){
+                @include d-flex-column--center()
+            }
+            &__button {
+                // borda (ativo) 
+                &--is-active {
+                    border-bottom: 4px solid variaveis.$textColorSecundary;
+                }
+                // reset 
+                &:nth-child(1){
+                    margin-left: 0;
+                }
+                cursor: pointer;
+                background-color: transparent;
+                // bordas
+                border: none;
+                border-bottom: 4px solid rgba(0, 0, 0, 0);
+                // margens e espaçamentos
+                margin: 16px 1vw;
+                padding-bottom: 5px;
+                // texto 
+                color: variaveis.$textColorPrimary;
+                font-size: 16px;
+                text-transform: uppercase;
+            }
+        }
+        &__list {
+            // grid
+            display: none;
+            grid-template-columns: repeat(4, 1fr);
+            // largura/altura
+            width: 1280px;
+            height: 34rem;
+            // margens
+            margin: 42px auto 0 auto;
+            gap: 1.5%;
+            // -----
+            opacity: 0;
+            list-style: none;
+            @media (max-width: 1024px) {
+                grid-template-columns: repeat(2, 1fr);
+                width: 80%;
+                height: 24rem;
+                overflow-y: scroll;
+            }
+            @media (max-width: 768px) {
+                grid-template-columns: repeat(2, 1fr);
+                width: 76%;
+                height: 26rem;
+                overflow-y: scroll;
+            }
+            @media (max-width: 425px) {
+                grid-template-columns: 1fr;
+                width: 76%;
+                height: 26rem;
+                overflow-y: scroll;
+            }
+            &--is-active {
+                display: grid;
+                animation: fadeIn 0.6s ease forwards;
+                opacity: 100%;
+            }
+            &__item {
+                cursor: pointer;
+                position: relative;
+                // animação
+                transition: .3s ease;
+                &:hover {
+                    transform: scale(1.05);
+                }
+                &__link {
+                    &__thumbnail {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 4px;
+                    }
+                    &__episode-id {
+                        // posicionamento
+                        position: absolute;
+                        top: 10%;
+                        // margem e espaçamento
+                        margin-left: 8px;
+                        padding: 10px;
+                        &__number {
+                            text-transform: capitalize;
+                            letter-spacing: 1.2px;
+                        }
+                    }
+                    &__episode-title {
+                        // posicionamento
+                        position: absolute;
+                        bottom: 5%;
+                        // margens/posionamento
+                        margin-left: 8px;
+                        padding: 10px;
+                        // ------ 
+                        text-align: start;
+                        &__episode-name {
+                            font-weight: bold;
+                            text-transform: capitalize;
+                            letter-spacing: 1.5px;
+                        }
+                    }
+                }
+            }   
+        }
+    }
+}

@@ -1,0 +1,107 @@
+// imports 
+@use '_variaveis';
+
+// mixins
+@mixin d-flex {
+    display: flex;
+    align-items: center;
+}
+@mixin d-flex--center {
+    @include d-flex();
+    justify-content: center
+}
+@mixin d-flex-column {
+    @include d-flex();
+    flex-direction: column;
+}
+@mixin d-flex-column--center {
+    @include d-flex--center();
+    flex-direction: column;
+}
+
+.about {
+    width: 1280px;
+    // margens 
+    margin: 65px auto;
+
+    @media (max-width: 1024px) {
+        width: 100%;
+        @include d-flex-column--center();
+    }
+    @media (max-width: 768px) {
+        width: 100%;
+        margin: 0 auto;
+    }
+    @media (max-width: 425px) {
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    
+
+    &__content {
+        padding-top: 98px;
+        @media (max-width: 768px) {
+            padding: 0;
+        }
+        // grid 
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+
+        &__side1 {
+            // flex-box 
+            display: flex;
+            flex-direction: column;
+            &__banner {
+                img {
+                    width: 100%;
+                    height: auto;
+                    // posicionamento 
+                    position: relative;
+                    top: 35px;
+                }
+            }
+        }
+        &__side2 {
+            &__titles {
+                @include d-flex();
+                // margins 
+                margin-bottom: 6px;
+                h2 {
+                    padding-right: 8px;
+                    border-right: 1px solid #FFF;   
+                }
+                h3 {
+                    padding-left: 8px;
+                }
+
+                @media (max-width: 1024px) {
+                    @include d-flex--center();
+                    margin-bottom: 12px;
+                }
+            }
+            &__text {
+                width: auto;
+                // texto 
+                text-align: justify;
+                @media (max-width: 425px) {
+                    padding-right: 15px;
+                }
+            }
+            @media (max-width: 425px) {
+                height: 20rem;
+                overflow-y: scroll;
+            }
+        }
+        @media (max-width: 1024px) {
+            @include d-flex-column--center();
+            flex-direction: column-reverse;
+            width: 70%;
+        }
+        @media (max-width: 425px) {
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+}

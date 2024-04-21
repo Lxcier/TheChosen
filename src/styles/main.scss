@@ -1,5 +1,14 @@
 // import archives
-@use 'mixins'; @use '_variaveis'; @use '_header'; @use '_hero'; @use '_about'; @use '_new-season'; @use '_watch'; @use '_cast'; @use '_faq'; @use '_footer';
+@use '_variaveis';
+@use '_mixins'; 
+@use '_header'; 
+@use '_hero'; 
+@use '_about';
+@use '_new-season';
+@use '_watch'; 
+@use '_cast'; 
+@use '_faq'; 
+@use '_footer';
 
 // display styles
 * {  //reset geral           
@@ -9,9 +18,18 @@
 }
 body {
     background-color: variaveis.$backgroundColorPrimary;
-    &__container {
-        width: 1280px;
-        margin: o auto;
+    .body__container {
+        width: auto;
+
+        @media (max-width: 1024px) {
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+        @media (max-width: 425px) {
+            width: 100%;
+        }
     }
 
     section { //define animação para a troca de seções
@@ -24,8 +42,8 @@ body {
         align-items: baseline;
     }
 }
-
 // common styles classes
 .colored {
     color: variaveis.$textColorSecundary
 }
+

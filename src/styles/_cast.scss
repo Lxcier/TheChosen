@@ -1,0 +1,168 @@
+@use '_variaveis';
+
+// mixins
+@mixin d-flex {
+    display: flex;
+    align-items: center;
+}
+@mixin d-flex--center {
+    @include d-flex();
+    justify-content: center
+}
+@mixin d-flex-column {
+    @include d-flex();
+    flex-direction: column;
+}
+@mixin d-flex-column--center {
+    @include d-flex--center();
+    flex-direction: column;
+}
+
+.cast {
+    &__content {
+        padding-top: 98px;
+        @media (max-width: 768px){
+            padding: 0;
+        }
+        @media (max-width: 425px){
+            padding: 0;
+        }
+        // largura
+        width: 1280px;
+        @media (max-width: 1024px) {
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+        @media (max-width: 425px) {
+            width: 100%;
+        }
+        // alinhamento
+        margin: 65px auto;
+        &__cast-banner {
+            @include d-flex--center();
+            &__banner {
+                width: 610px;
+                height: auto;
+
+                @media (max-width: 768px) {
+                    width: 100%;
+                    height: auto;
+                }
+                @media (max-width: 425px) {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        &__carousel {
+            position: relative;
+            width: 1280px;
+            height: 720px;
+            margin: 0 auto 18px;
+            overflow: hidden;
+            @media (max-width: 1024px) {
+                width: 96%;
+                height: auto;
+            }
+            @media (max-width: 425px) {
+                width: 96%;
+                height: auto;
+                margin: 0;
+            }
+            @media (max-width: 425px) {
+                width: 94%;
+                height: auto;
+                margin: 0;
+            }
+
+            &__carousel-track {
+                @include d-flex();
+                transition: transform 0.5s ease-in-out;
+
+                &__item {
+                    position: relative;
+                    flex: 0 0 100%;
+                    
+                    img {
+                        width: 100%;
+                        filter: grayscale(100%);
+                        transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+                        
+                        @media (max-width: 768px) {
+                            width: 100%;
+                            height: auto;
+                        }
+                        @media (max-width: 425px) {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+
+                    &__info {
+                        position: absolute;
+                        bottom: 10px;
+                        left: 10px;
+                        color: #fff;
+                        
+                        h3 {
+                            margin: 0;
+                            font-size: 1.4em;
+                            @media (max-width: 425px) {
+                                font-size: 1em;
+                            }
+                        }
+                        
+                        p {
+                            margin: 0;
+                            @media (max-width: 425px) {
+                                font-size: .8em;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &__carousel-prev,
+            &__carousel-next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background: none;
+                border: none;
+                color: #fff;
+                cursor: pointer;
+                font-size: 2em;
+                z-index: 2;
+                
+                &.hidden {
+                    display: none;
+                }
+            }
+            &__carousel-prev {
+                left: 10px;
+            }
+            &__carousel-next {
+                right: 10px;
+            }
+
+            &__carousel-dots {
+                text-align: center;
+                .dot {
+                    display: inline-block;
+                    height: 10px;
+                    width: 10px;
+                    margin: 0 5px;
+                    background-color: #bbb;
+                    border-radius: 50%;
+                    cursor: pointer;
+
+                    &--is-active {
+                        background-color: variaveis.$textColorSecundary;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,3 +1,24 @@
+//import
+@use '_variaveis'; 
+
+// mixins
+@mixin d-flex {
+    display: flex;
+    align-items: center;
+}
+@mixin d-flex--center {
+    @include d-flex();
+    justify-content: center
+}
+@mixin d-flex-column {
+    @include d-flex();
+    flex-direction: column;
+}
+@mixin d-flex-column--center {
+    @include d-flex--center();
+    flex-direction: column;
+}
+
 .header{
     // texto / cor 
     background-color: variaveis.$backgroundColorPrimary;
@@ -5,34 +26,49 @@
     //posicionamento
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 9999;
     //largura / altura
     width: 100%;
     height: 86px;
     line-height: 22px;
     // box model 
     box-shadow: 8px 13px 12px 3px rgb(0 0 0 / 35%);
-
+    @media (max-width: 1024px) {
+        width: 100%;
+    }
+    @media (max-width: 768px){
+        width: 100%;
+        height: 92px;
+    }
+    @media (max-width: 425px){
+        width: 100%;
+    }
     //estilo interno
     &__content {
         // flex model / alinhamento
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include d-flex--center();
         // largura / altura 
-        max-width: 1280px;
         width: 100%;
         height: 100%;
         // margens
         margin: 0 auto;
 
+        @media (max-width: 1024px) {
+            width: 100%;
+        }
+        @media (max-width: 768px){
+            width: 100%;
+        }
+        @media (max-width: 425px){
+            width: 100%;
+        }
+        
         // estilo do menu de navegação 
         &__nav {
             &__navbar {
                 &__list {
                     // flex model / alinhamento
-                    display: flex;
-                    align-items: center;
+                    @include d-flex();
                     //lista
                     list-style: none;
 
@@ -40,27 +76,49 @@
                     &__item {
                         // texto 
                         text-decoration: none;
-
-                        // seletor de item 
-                        &:nth-child(1) {
+                        &__link-button{
+                            // reset
+                            cursor: pointer;
+                            border: none;
                             // cor de fundo
                             background-color: variaveis.$textColorSecundary;
                             // espaçamento interno
                             padding: 8px;
-                            // estilo do hover 
+                            // estilo do hover
+                            a {
+                                text-decoration: none;
+                            }
                             &:hover {
                                 // cores do fundo e texto
                                 background-color: variaveis.$textColorPrimary;
-                                color: variaveis.$textColorSecundary;
+                                a {
+                                    color: variaveis.$textColorSecundary;
+                                }
                             }
                         }
+
+                        // seletor de item 
                         &:nth-child(1), &:nth-child(2) {
                             // margens 
                             margin-right: 40px;
+                            @media (max-width: 768px){
+                                display: none;
+                            }
                         }
                         &:nth-child(3) {
                             //animações 
                             transition: .2s linear;
+                            .logo {
+                                height: 60px;
+                                width: auto;
+                                @media (max-width: 768px){
+                                    height: 72px;
+                                }
+                                @media (max-width: 425px){
+                                    height: 50px;
+                                    width: auto;
+                                }
+                            }
                             &:hover {
                                 transform: scale(1.05);
                             }
@@ -68,6 +126,9 @@
                         &:nth-child(4), &:nth-child(5) {
                             // margens 
                             margin-left: 40px;
+                            @media (max-width: 768px){
+                                display: none;
+                            }
                         }
 
                         &__link, &__link-button {
@@ -91,7 +152,4 @@
         }
     }
 }
-
-//import
-@use '_variaveis'; 
 

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project - The Chosen</title>
+    <link rel="stylesheet" href="./dist/style/main.css">
 </head>
 <body id="body">
     <div class="body__container">
@@ -12,19 +13,23 @@
                 <div class="header__content__nav">
                     <nav class="header__content__nav__navbar">
                         <ul class="header__content__nav__navbar__list">
-                            <li class="header__content__nav__navbar__list__item"><a href="#" class="header__content__nav__navbar__list__item__link-button">
-                                4ª Temporada
-                            </a></li>
-                            <li class="header__content__nav__navbar__list__item"><a href="#" class="header__content__nav__navbar__list__item__link">
+                            <li class="header__content__nav__navbar__list__item">
+                                <button class="header__content__nav__navbar__list__item__link-button">
+                                    <a href="#fourth-season" class="text--big">
+                                        4ª Temporada
+                                    </a>
+                                </button>
+                            </li>
+                            <li class="header__content__nav__navbar__list__item"><a href="#about" class="header__content__nav__navbar__list__item__link text--big">
                                 Sobre a série
                             </a></li>
-                            <li class="header__content__nav__navbar__list__item"><a href="#" class="header__content__nav__navbar__list__item__link">
-                                <img src="" alt="" class="logo">
+                            <li class="header__content__nav__navbar__list__item"><a href="#home" class="header__content__nav__navbar__list__item__link text--big">
+                                <img src="/src/images/header/site-logo.png" alt="The Chosen LOGO" class="logo">
                             </a></li>
-                            <li class="header__content__nav__navbar__list__item"><a href="#" class="header__content__nav__navbar__list__item__link">
-                                Assita The Chosen
+                            <li class="header__content__nav__navbar__list__item"><a href="#watch" class="header__content__nav__navbar__list__item__link text--big">
+                                Assista The Chosen
                             </a></li>
-                            <li class="header__content__nav__navbar__list__item"><a href="#" class="header__content__nav__navbar__list__item__link">
+                            <li class="header__content__nav__navbar__list__item"><a href="#cast" class="header__content__nav__navbar__list__item__link text--big">
                                 Cast
                             </a></li>
                         </ul>
@@ -33,40 +38,45 @@
             </div>
         </header>
         <section id="home" class="hero">
-            <div class="hero__background"></div>
             <div class="hero__content">
-                <img src="//" alt="Logo da EBAC">
-                <h3 class="subtitle">Acostume-se com o diferente.</h3>
+                <div class="hero__content__background">
+                    <img src="./src/images/hero/hero-banner2.jpg" alt="Banner da série The Chosen">
+                </div>
+                <div class="hero__content__background-mobile">
+                    <img src="./src/images/hero/hero-banner(mobile).jpg" alt="Come and see">
+                </div>
             </div>
         </section>
         <section id="about" class="about">
             <div class="about__content">
-                <div class="about__content__titles">
-                    <h2 class="title">The <span class="colored">Chosen</span></h2>
-                    <h3 class="subtitle-small">Sobre</h3>
+                <div class="about__content__side1">
+                    <div class="about__content__side1__banner">
+                        <img src="./src/images/about/about-background.jpg" alt="">
+                    </div>
                 </div>
-                <div class="about__content__texts">
-                    <p class="about__content__texts__text">
+                <div class="about__content__side2">
+                    <div class="about__content__side2__titles">
+                        <h2 class="title">The <span class="colored">Chosen</span></h2>
+                        <h3 class="title--small">Sobre</h3>
+                    </div>
+                    <p class="about__content__side2__text text" >
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum praesentium pariatur ducimus quae explicabo fuga corrupti mollitia, quam ea dolore rerum numquam qui deleniti quibusdam earum dolor harum molestiae incidunt?
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam illo neque cupiditate maiores recusandae expedita rerum nostrum temporibus sint adipisci hic voluptate qui nesciunt, quidem voluptates reiciendis, a autem veritatis?
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laboriosam quod corporis repudiandae expedita aut totam, aliquid quam excepturi ducimus dignissimos laudantium hic atque consequatur autem libero debitis beatae vitae?
                     </p>
                     <br>
-                    <p class="about__content__texts_text">
+                    <p class="about__content__side2__text text">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla tempora saepe id temporibus mollitia dicta natus est numquam, voluptas, dolores quo animi autem quas inventore officiis nemo laudantium quam. Quod.
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab nostrum suscipit, accusamus perspiciatis earum numquam debitis laborum hic. Quasi beatae magnam pariatur sint illo ipsum, nisi vel nobis voluptatem omnis.
                     </p>
                 </div>
             </div>
-            <div class="about__content__image">
-                <img src="#" alt="Personagem Éden">
-            </div>
         </section>
-        <section id="fouth-season" class="new-season">
+        <section id="fourth-season" class="new-season">
             <div class="new-season__content">
                 <div class="new-season__content__titles">
-                    <h2 class="title">4ª Temporada</h2><span>|</span>
-                    <h3 class="subtitle-small">Trailer Oficial</h3>
+                    <h2 class="title">4ª Temporada</h2>
+                    <h3 class="title--small">Trailer Oficial</h3>
                 </div>
             </div>
             <div class="new-season__content__trailer">
@@ -75,177 +85,149 @@
         </section>
         <section id="watch" class="watch">
             <div class="watch__content">
-                <div class="about__content__titles">
+                <div class="watch__content__titles">
                     <h2 class="title">Temporadas</h2> <span>|</span>
-                    <h3 class="subtitle-small">Episódios</h3>
+                    <h3 class="title--small">Episódios</h3>
                 </div>
                 <nav class="watch__content__tabs">
-                    <button data-tab-button="temporada-1" class="seasons__tabs__button seasons__tabs__button--is-active">
+                    <button data-tab-button="temporada-1" class="watch__content__tabs__button watch__content__tabs__button--is-active">
                         Temporada 1
                     </button>
-                    <button data-tab-button="temporada-2" class="seasons__tabs__button">
+                    <button data-tab-button="temporada-2" class="watch__content__tabs__button">
                         Temporada 2
                     </button>
-                    <button data-tab-button="temporada-3" class="seasons__tabs__button">
+                    <button data-tab-button="temporada-3" class="watch__content__tabs__button">
                         Temporada 3
                     </button>
                 </nav>
                 <ul data-tab-id="temporada-1" class="watch__content__list watch__content__list--is-active">
                     <li class="watch__content__list__item">
-                        <a href="https://watch.thechosen.tv/video/184683594442" target="_blank">
-                            <img src="./dist/images/seasons/1x1.png" alt="Desencantada">
-                            <div class="episode-id titles">
-                                <span class="episode-id__number subtitle">
+                        <a href="https://watch.thechosen.tv/video/184683594442" target="_blank" class="watch__content__list__item__link">
+                            <img src="src/images/watch/1season/1x1.png" class="watch__content__list__item__link__thumbnail">
+                            <div class="watch__content__list__item__link__episode-id">
+                                <span class="watch__content__list__item__link__episode-id__number text--small">
                                     Trailer
                                 </span>
                             </div>
-                            <div class="titles">
-                                <h4 class="episode-name title" style="font-size: 14px;">Temporada 1: Trailer Oficial</h4>
+                            <div class="watch__content__list__item__link__episode-title text">
+                                <h4 class="watch__content__list__item__link__episode-title__episode-name">Temporada 1: Trailer Oficial</h4>
                             </div>
                         </a>
                     </li>
                     <li class="watch__content__list__item">
-                        <a href="https://watch.thechosen.tv/video/184683594334" target="_blank">
-                            <img src="./dist/images/seasons/1x2.png" alt="Desencantada">
-                            <div class="episode-id titles">
-                                <span class="episode-id__number subtitle">
+                        <a href="https://watch.thechosen.tv/video/184683594334" target="_blank" class="watch__content__list__item__link">
+                            <img src="/src/images/watch/1season/1x1.png" class="watch__content__list__item__link__thumbnail">
+                            <div class="watch__content__list__item__link__episode-id">
+                                <span class="watch__content__list__item__link__episode-id__number text--small">
                                     1x1
                                 </span>
                             </div>
-                            <div class="titles">
-                                <h4 class="episode-name title">Eu Te Chamei Pelo Nome</h4>
+                            <div class="watch__content__list__item__link__episode-title text">
+                                <h4 class="watch__content__list__item__link__episode-title__episode-name">Eu Te Chamei Pelo Nome</h4>
                             </div>
                         </a>
                     </li>
                     <li class="watch__content__list__item">
-                        <a href="https://watch.thechosen.tv/video/184683594335" target="_blank">
-                            <img src="./dist/images/seasons/1x3.png" alt="Desencantada">
-                            <div class="episode-id titles">
-                                <span class="episode-id__number subtitle">
+                        <a href="https://watch.thechosen.tv/video/184683594335" target="_blank" class="watch__content__list__item__link">
+                            <img src="/src/images/watch/1season/1x1.png" class="watch__content__list__item__link__thumbnail">
+                            <div class="watch__content__list__item__link__episode-id">
+                                <span class="watch__content__list__item__link__episode-id__number text--small">
                                     1x2
                                 </span>
                             </div>
-                            <div class="titles">
-                                <h4 class="episode-name title">Shabbat</h4>
+                            <div class="watch__content__list__item__link__episode-title text">
+                                <h4 class="watch__content__list__item__link__episode-title__episode-name">Shabbat</h4>
                             </div>
                         </a>
                     </li>
                     <li class="watch__content__list__item">
-                        <a href="https://watch.thechosen.tv/video/184683594336" target="_blank">
-                            <img src="./dist/images/seasons/1x4.png" alt="Desencantada">
-                            <div class="episode-id titles">
-                                <span class="episode-id__number subtitle">
+                        <a href="https://watch.thechosen.tv/video/184683594336" target="_blank" class="watch__content__list__item__link">
+                            <img src="/src/images/watch/1season/1x1.png" class="watch__content__list__item__link__thumbnail">
+                            <div class="watch__content__list__item__link__episode-id">
+                                <span class="watch__content__list__item__link__episode-id__number text--small">
                                     1x3
                                 </span>
                             </div>
-                            <div class="titles">
-                                <h4 class="episode-name title">Jesus Ama as Criancinhas</h4>
+                            <div class="watch__content__list__item__link__episode-title text">
+                                <h4 class="watch__content__list__item__link__episode-title__episode-name">Jesus Ama as Criancinhas</h4>
                             </div>
                         </a>
                     </li>
                     <li class="watch__content__list__item">
-                        <a href="https://watch.thechosen.tv/video/184683594337" target="_blank">
-                            <img src="./dist/images/seasons/1x5.png" alt="Desencantada">
-                            <div class="episode-id titles">
-                                <span class="episode-id__number subtitle">
+                        <a href="https://watch.thechosen.tv/video/184683594337" target="_blank" class="watch__content__list__item__link">
+                            <img src="/src/images/watch/1season/1x1.png" class="watch__content__list__item__link__thumbnail">
+                            <div class="watch__content__list__item__link__episode-id">
+                                <span class="watch__content__list__item__link__episode-id__number text--small">
                                     1x4
                                 </span>
                             </div>
-                            <div class="titles">
-                                <h4 class="episode-name title">A Rocha Sobre a Qual É Construida</h4>
+                            <div class="watch__content__list__item__link__episode-title text">
+                                <h4 class="watch__content__list__item__link__episode-title__episode-name">A Rocha Sobre a Qual É Construida</h4>
                             </div>
                         </a>
                     </li>
                     <li class="watch__content__list__item">
-                        <a href="https://watch.thechosen.tv/video/184683594338" target="_blank">
-                            <img src="./dist/images/seasons/1x6.png" alt="Desencantada">
-                            <div class="episode-id titles">
-                                <span class="episode-id__number subtitle">
+                        <a href="https://watch.thechosen.tv/video/184683594338" target="_blank" class="watch__content__list__item__link">
+                            <img src="/src/images/watch/1season/1x1.png" class="watch__content__list__item__link__thumbnail">
+                            <div class="watch__content__list__item__link__episode-id">
+                                <span class="watch__content__list__item__link__episode-id__number text--small">
                                     1x5
                                 </span>
                             </div>
-                            <div class="titles">
-                                <h4 class="episode-name title">O Presente de Casamento</h4>
+                            <div class="watch__content__list__item__link__episode-title text">
+                                <h4 class="watch__content__list__item__link__episode-title__episode-name">O Presente de Casamento</h4>
                             </div>
                         </a>
                     </li>
                     <li class="watch__content__list__item">
-                        <a href="https://watch.thechosen.tv/video/184683594339" target="_blank">
-                            <img src="./dist/images/seasons/1x7.png" alt="Desencantada">
-                            <div class="episode-id titles">
-                                <span class="episode-id__number subtitle">
+                        <a href="https://watch.thechosen.tv/video/184683594339" target="_blank" class="watch__content__list__item__link">
+                            <img src="/src/images/watch/1season/1x1.png" class="watch__content__list__item__link__thumbnail">
+                            <div class="watch__content__list__item__link__episode-id">
+                                <span class="watch__content__list__item__link__episode-id__number text--small">
                                     1x6
                                 </span>
                             </div>
-                            <div class="titles">
-                                <h4 class="episode-name title">Compaixão Indescrítivel</h4>
+                            <div class="watch__content__list__item__link__episode-title text">
+                                <h4 class="watch__content__list__item__link__episode-title__episode-name">Compaixão Indescrítivel</h4>
                             </div>
                         </a>
                     </li>
                     <li class="watch__content__list__item">
-                        <a href="https://watch.thechosen.tv/video/184683594340" target="_blank">
-                            <img src="./dist/images/seasons/1x8.png" alt="Desencantada">
-                            <div class="episode-id titles">
-                                <span class="episode-id__number subtitle">
+                        <a href="https://watch.thechosen.tv/video/184683594340" target="_blank" class="watch__content__list__item__link">
+                            <img src="/src/images/watch/1season/1x1.png" class="watch__content__list__item__link__thumbnail">
+                            <div class="watch__content__list__item__link__episode-id">
+                                <span class="watch__content__list__item__link__episode-id__number text--small">
                                     1x7
                                 </span>
                             </div>
-                            <div class="titles">
-                                <h4 class="episode-name title">Convites</h4>
+                            <div class="watch__content__list__item__link__episode-title text">
+                                <h4 class="watch__content__list__item__link__episode-title__episode-name">Convites</h4>
                             </div>
                         </a>
                     </li>
                     <li class="watch__content__list__item">
-                        <a href="https://watch.thechosen.tv/video/184683594341" target="_blank">
-                            <img src="./dist/images/seasons/1x9.png" alt="Desencantada">
-                            <div class="episode-id titles">
-                                <span class="episode-id__number subtitle">
+                        <a href="https://watch.thechosen.tv/video/184683594341" target="_blank" class="watch__content__list__item__link">
+                            <img src="/src/images/watch/1season/1x1.png" class="watch__content__list__item__link__thumbnail">
+                            <div class="watch__content__list__item__link__episode-id">
+                                <span class="watch__content__list__item__link__episode-id__number text--small">
                                     1x8
                                 </span>
                             </div>
-                            <div class="titles">
-                                <h4 class="episode-name title">Eu Sou Ele</h4>
+                            <div class="watch__content__list__item__link__episode-title text">
+                                <h4 class="watch__content__list__item__link__episode-title__episode-name">Eu Sou Ele</h4>
                             </div>
                         </a>
                     </li>
                     <li class="watch__content__list__item">
-                        <a href="https://watch.thechosen.tv/video/184683594365" target="_blank">
-                            <img src="./dist/images/seasons/1x10.png" alt="Desencantada">
-                            <div class="episode-id titles">
-                                <span class="episode-id__number subtitle">
+                        <a href="https://watch.thechosen.tv/video/184683594365" target="_blank" class="watch__content__list__item__link">
+                            <img src="/src/images/watch/1season/1x1.png" class="watch__content__list__item__link__thumbnail">
+                            <div class="watch__content__list__item__link__episode-id">
+                                <span class="watch__content__list__item__link__episode-id__number text--small">
                                     1x9
                                 </span>
                             </div>
-                            <div class="titles">
-                                <h4 class="episode-name title">O Pastor</h4>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <ul data-tab-id="temporada-2" class="watch__content__list">
-                    <li class="watch__content__list__item">
-                        <a href="https://watch.thechosen.tv/video/184683594442" target="_blank">
-                            <img src="./dist/images/seasons/1x1.png" alt="trailer da segunda temporada">
-                            <div class="episode-id titles">
-                                <span class="episode-id__number subtitle">
-                                    Trailer
-                                </span>
-                            </div>
-                            <div class="titles">
-                                <h4 class="episode-name title" style="font-size: 14px;">Temporada 2: Trailer Oficial</h4>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="watch__content__list__item">
-                        <a href="https://watch.thechosen.tv/video/184683594334" target="_blank">
-                            <img src="./dist/images/seasons/1x2.png" alt="Desencantada">
-                            <div class="episode-id titles">
-                                <span class="episode-id__number subtitle">
-                                    1x1
-                                </span>
-                            </div>
-                            <div class="titles">
-                                <h4 class="episode-name title">Eu Te Chamei Pelo Nome</h4>
+                            <div class="watch__content__list__item__link__episode-title text">
+                                <h4 class="watch__content__list__item__link__episode-title__episode-name">O Pastor</h4>
                             </div>
                         </a>
                     </li>
@@ -254,69 +236,71 @@
         </section>
         <section id="cast" class="cast">
             <div class="cast__content">
-                <div class="cast__content__background"></div>
+                <div class="cast__content__cast-banner">
+                    <img src="/src/images/casting/section-banner.png"  class="cast__content__cast-banner__banner">
+                </div>
                 <div class="cast__content__carousel">
-                    <div class="cast__content__carousel-track">
-                        <div class="cast__content__carousel__item">
+                    <div class="cast__content__carousel__carousel-track">
+                        <div class="cast__content__carousel__carousel-track__item">
                             <img src="src/images//casting/banners/jesus-banner.jpg" alt="Jesus, o Nazareno">
-                            <div class="cast__content__carousel__item-info">
+                            <div class="cast__content__carousel__carousel-track__item__info">
                                 <h3>Jesus, o Nazareno</h3>
                                 <p>Jonathan Roumie</p>
                             </div>
                         </div>
-                        <div class="cast__content__carousel__item">
+                        <div class="cast__content__carousel__carousel-track__item">
                             <img src="src/images//casting/banners/banner-mateus.png" alt="Mateus, Matias">
-                            <div class="cast__content__carousel__item-info">
+                            <div class="cast__content__carousel__carousel-track__item__info">
                                 <h3>Mateus</h3>
                                 <p>Paras Patel</p>
                             </div>
                         </div>
-                        <div class="cast__content__carousel__item">
+                        <div class="cast__content__carousel__carousel-track__item">
                             <img src="src/images//casting/banners/banner-maria.png" alt="Maria Madalena">
-                            <div class="cast__content__carousel__item-info">
+                            <div class="cast__content__carousel__carousel-track__item__info">
                                 <h3>Maria de Magdala</h3>
                                 <p>Elizabeth Tabish</p>
                             </div>
                         </div>
-                        <div class="cast__content__carousel__item">
+                        <div class="cast__content__carousel__carousel-track__item">
                             <img height="610" width="1280" src="src/images/casting/banners/cefas-banner.png" alt="Cefas, Pedro">
-                            <div class="cast__content__carousel__item-info">
+                            <div class="cast__content__carousel__carousel-track__item__info">
                                 <h3>Simão Pedro</h3>
                                 <p>Shahar Isaac</p>
                             </div>
                         </div>
-                        <div class="cast__content__carousel__item">
+                        <div class="cast__content__carousel__carousel-track__item">
                             <img height="610" width="1280" src="src/images/casting/banners/eden-banner.png" alt="Eden">
-                            <div class="cast__content__carousel__item-info">
+                            <div class="cast__content__carousel__carousel-track__item__info">
                                 <h3>Éden</h3>
                                 <p>Lara Silva</p>
                             </div>
                         </div>
-                        <div class="cast__content__carousel__item">
+                        <div class="cast__content__carousel__carousel-track__item">
                             <img height="610" width="1280" src="src/images/casting/banners/andrew-banner.png" alt="Andrew">
-                            <div class="cast__content__carousel__item-info">
+                            <div class="cast__content__carousel__carousel-track__item__info">
                                 <h3>André</h3>
                                 <p>Noah James</p>
                             </div>
                         </div>
-                        <div class="cast__content__carousel__item">
+                        <div class="cast__content__carousel__carousel-track__item">
                             <img height="610" width="1280" src="src/images/casting/banners/felipe-banner.png" alt="felipe">
-                            <div class="cast__content__carousel__item-info">
+                            <div class="cast__content__carousel__carousel-track__item__info">
                                 <h3>Felipe</h3>
                                 <p>Yoshi Barrigas</p>
                             </div>
                         </div>
-                        <div class="cast__content__carousel__item">
+                        <div class="cast__content__carousel__carousel-track__item">
                             <img height="610" width="1280" src="src/images/casting/banners/nicodemos-banner.jpg" alt="Nicodemos">
-                            <div class="cast__content__carousel__item-info">
+                            <div class="cast__content__carousel__carousel-track__item__info">
                                 <h3>Nicodemos</h3>
                                 <p>Erick Avari</p>
                             </div>
                         </div>
                     </div>
-                    <button class="cast__content__carousel-prev">&#10094;</button>
-                    <button class="cast__content__carousel-next">&#10095;</button>
-                    <div class="cast__content__carousel-dots">
+                    <button class="cast__content__carousel__carousel-prev">&#10094;</button>
+                    <button class="cast__content__carousel__carousel-next">&#10095;</button>
+                    <div class="cast__content__carousel__carousel-dots">
                         <span class="dot"></span>
                         <span class="dot"></span>
                         <span class="dot"></span>
@@ -337,7 +321,7 @@
                 <ul class="faq__content__questions">
                     <li class="faq__content__questions__item">
                         <div class="faq__content__questions__item__question" data-faq-question >
-                            <span class="subtitle">
+                            <span class="title--small">
                                 Quantas temporadas tem a série?
                             </span>
                             <span class="faq__content__questions__item__icon">+</span>
@@ -350,7 +334,7 @@
                     </li>
                     <li class="faq__content__questions__item">
                         <div class="faq__content__questions__item__question" data-faq-question="faq">
-                            <span class="subtitle">
+                            <span class="title--small">
                                 É pecado assistir a série The Chosen?
                             </span>
                             <span class="faq__content__questions__item__icon">+</span>
@@ -363,7 +347,7 @@
                     </li>
                     <li class="faq__content__questions__item">
                         <div class="faq__content__questions__item__question" data-faq-question >
-                            <span class="subtitle">
+                            <span class="title--small">
                                 Por que a série acrecenta falas?
                             </span>
                             <span class="faq__content__questions__item__icon">+</span>
@@ -379,12 +363,18 @@
         </section>
         <footer class="footer">
             <div class="footer__content">
-                <img class="logo" src="//" alt="" height="60" width="140">
+                <img class="logo" src="/src/images/header/site-logo.png" alt="" height="60" width="140">
                 <div class="footer__content__text">
-                    <p class="colored">&copy; - Todos os direitos reservados</p>
+                    <p class="text--small">&copy; - Todos os direitos reservados</p>
                 </div>
             </div>
         </footer>
     </div>
+    <!-- scripts -->
+    <script src="/src/scripts/header.js"></script>
+    <script src="src/scripts/anchor.js"></script>
+    <script src="/src/scripts/watch.js"></script>
+    <script src="/src/scripts/carousel.js"></script>
+    <script src="src/scripts/faq.js"></script>
 </body>
 </html>
