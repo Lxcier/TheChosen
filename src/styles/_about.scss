@@ -54,6 +54,9 @@
             display: flex;
             flex-direction: column;
             &__banner {
+                @media (max-width: 425px) {
+                    display: none;
+                }
                 img {
                     width: 100%;
                     height: auto;
@@ -90,10 +93,10 @@
                 }
             }
             @media (max-width: 425px) {
-                height: 20rem;
-                overflow-y: scroll;
+                height: auto;
             }
         }
+
         @media (max-width: 1024px) {
             @include d-flex-column--center();
             flex-direction: column-reverse;

@@ -64,6 +64,8 @@
                 width: 100%;
             }
             iframe {
+                display: block;
+                margin: 0 auto;
                 @media (max-width: 1024px) {
                     width: 720px;
                     height: 610px;
@@ -73,8 +75,8 @@
                     height: 315px;
                 }
                 @media (max-width: 425px){
-                    width: 100%;
-                    height: auto;
+                    width: 98%;
+                    height: 218px;
                 }
             }
         }

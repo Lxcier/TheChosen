@@ -130,6 +130,14 @@
                     transform: scale(1.05);
                 }
                 &__link {
+                    &::before {
+                        content: '';
+                        height: 100%;
+                        width: 100%;
+                        background: #000;
+                        opacity: .4;
+                        position: absolute;
+                    }
                     &__thumbnail {
                         width: 100%;
                         height: 100%;

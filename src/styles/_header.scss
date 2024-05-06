@@ -76,6 +76,7 @@
                     &__item {
                         // texto 
                         text-decoration: none;
+                        text-transform: uppercase;
                         &__link-button{
                             // reset
                             cursor: pointer;
@@ -84,6 +85,7 @@
                             background-color: variaveis.$textColorSecundary;
                             // espaçamento interno
                             padding: 8px;
+                            border-radius: 4px;
                             // estilo do hover
                             a {
                                 text-decoration: none;
